@@ -1,13 +1,14 @@
 const Person = require('./Person');
 
 // Refactor this code to use inheritance!
-class Student {
+/* 
+Extends allows the current class to use the methods from the class is extended from.
+*/
+class Student extends Person{
   courses = [];
 
   constructor(first, last, age, subject, school) {
-    this.firstName = first;
-    this.lastName = last;
-    this.age = age;
+    super(first, last, age);
     this.subject = subject;
     this.school = school;
   }
